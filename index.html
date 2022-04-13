@@ -6,46 +6,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hacker News Clone</title>
-    <link href="./styles.css" rel="stylesheet">
+    <style>
+        body {
+            font-size: 14px;
+            font-family: Verdana, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .header {
+            background-color: #f97316;
+            padding: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-right {
+            display: flex;
+        }
+
+        .logo {
+            border: 1px solid white;
+            color: white;
+            font-weight: bold;
+            height: 20px;
+            width: 20px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: bold;
+            margin-left: 4px;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            margin-left: 12px;
+        }
+
+        .nav-item {
+            color: #000000;
+            text-decoration: none;
+            line-height: 20px;
+        }
+
+        .nav-item:before {
+            content: '|';
+            margin-left: 4px;
+            margin-right: 4px;
+        }
+
+        .nav-item:first-child:before {
+            content: none;
+        }
+
+        .login {
+            color: black;
+            text-decoration: none;
+            margin-right: 4px;
+        }
+    </style>
 </head>
 
 <body>
 
-    <div class="container mx-auto max-w-7xl my-2">
-        <header class="h-6 p-0.5 bg-orange-500 flex items-center justify-between">
-            <div class="flex items-center">
-                <div class="h-5 w-5 border border-white text-white inline-flex items-center justify-center">
-                    Y
-                </div>
-                <div class="font-bold ml-1 text-sm">Hacker News Clone</div>
-                <nav>
-                    <ul class="flex text-sm ml-3">
-                        <li class="flex">
-                            <a href="#">new</a>
-                        </li>
-                        <li class="flex before:content-['|'] before:mx-1.5">
-                            <a href="#">past</a>
-                        </li>
-                        <li class="flex before:content-['|'] before:mx-1.5">
-                            <a href="#">comments</a>
-                        </li>
-                        <li class="flex before:content-['|'] before:mx-1.5">
-                            <a href="#">ask</a>
-                        </li>
-                        <li class="flex before:content-['|'] before:mx-1.5">
-                            <a href="#">show</a>
-                        </li>
-                        <li class="flex before:content-['|'] before:mx-1.5">
-                            <a href="#">jobs</a>
-                        </li>
-                        <li class="flex before:content-['|'] before:mx-1.5">
-                            <a href="#">submit</a>
-                        </li>
-                    </ul>
+    <div class="container">
+        <header class="header">
+            <div class="header-left">
+                <div class="logo">Y</div>
+                <div class="title">Hacker News Clone</div>
+                <nav class="nav">
+                    <a href="#" class="nav-item">new</a>
+                    <a href="#" class="nav-item">past</a>
+                    <a href="#" class="nav-item">comments</a>
+                    <a href="#" class="nav-item">ask</a>
                 </nav>
             </div>
-            <div>
-                <a href="#" class="text-sm leading-6 mr-1">login</a>
+            <div class="header-right">
+                <a href="#" class="login">login</a>
             </div>
         </header>
     </div>
